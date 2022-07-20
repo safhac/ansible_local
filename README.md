@@ -1,6 +1,14 @@
 
 ## ansible install nginx on localhost
-`ansible-playbook -i local_inventory.yml nginx_local_install.yml -b`
+in the cfg file create [local] group with localhost
+in [local:vars] set `ansible_conneciton=local`
+and run `ansible-playbook -i inventory.cfg local -b`
+___
+
+## ansible install nginx on aws
+in the cfg file create [aws] group with your aws host
+in [aws:vars] set your aws user and key location
+and run `ansible-playbook -i inventory.cfg aws -b`
 ___
 
 ## ansible install nginx on a container

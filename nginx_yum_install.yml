@@ -1,0 +1,11 @@
+---
+- hosts: aws
+  become: true
+  tasks:
+    - name: Install nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+        update_cache: yes
+      notify:
+      - start nginx
