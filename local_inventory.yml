@@ -1,0 +1,7 @@
+web:
+  hosts:
+    pe-T470p
+  vars:
+    domain: localhost
+    ansible_connection: local
+    ansible_python_interpreter: /usr/bin/python3
